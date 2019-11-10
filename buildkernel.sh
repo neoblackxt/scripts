@@ -23,7 +23,7 @@ function clone_custom_clang()
   apt-get --no-install-recommends install libc6 libstdc++6 libgnutls30 ccache -y
 #  git clone https://github.com/wloot/clang --depth=1 -b master clang
   apt-get --no-install-recommends install zstd -y
-  curl https://kdrag0n.dev/files/toolchains/proton_clang-10.0.0-20191002-full.tar.zst | tar -I zstd -xf -
+  curl -L https://kdrag0n.dev/files/redirector/proton_clang-latest.tar.zst | tar -I zstd -xf -
   mv proton_clang* clang
   CLANG_VERSION="CLANG 10"
   CLANG_PATH="${PWD}/clang"
